@@ -75,7 +75,7 @@ public class Application {
 
 		// emit result
 		if (params.has("output")) {
-			result.writeAsText(params.get("output"));
+			result.writeAsCsv(params.get("output"), "\n", ";");
 			// execute program
 			env.execute("Linear Regression example");
 		} else {
